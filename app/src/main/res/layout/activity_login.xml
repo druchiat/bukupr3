@@ -13,6 +13,9 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/tvLogo"
         app:layout_constraintEnd_toStartOf="@+id/tvLogo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvLogo"
         app:srcCompat="@drawable/logo" />
 
@@ -20,7 +23,6 @@
         android:id="@+id/tvLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
         android:layout_marginTop="64dp"
         android:fontFamily="@font/unicaone"
         android:letterSpacing="0.1"
@@ -30,7 +32,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ivLogo"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -48,8 +49,8 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="320dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
         android:background="@drawable/sign_in_layout"
         android:orientation="vertical"
         android:padding="20dp"
