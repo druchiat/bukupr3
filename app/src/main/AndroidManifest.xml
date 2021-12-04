@@ -10,7 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BukuPR3">
         <activity
-            android:name=".MainActivity"
+            android:name=".DetailTugasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateTugasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TugasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateBukuPrActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BukuPrActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
