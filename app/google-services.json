@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "903509895210",
+    "project_id": "bukupr3-13ada",
+    "storage_bucket": "bukupr3-13ada.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903509895210:android:ed8665b1566e8f329d3b53",
+        "android_client_info": {
+          "package_name": "com.example.bukupr3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903509895210-b84ij6bbi8ipmkcqic0rt4d9o46cf2iq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZpwaq5s-h6mBLWY-SzZBpi8SMyWluV_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903509895210-b84ij6bbi8ipmkcqic0rt4d9o46cf2iq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

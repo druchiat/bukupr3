@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,161 +7,168 @@
     android:background="@color/base_background"
     tools:context=".SignupActivity">
 
-    <ImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="70dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvLogo"
-        app:layout_constraintEnd_toStartOf="@+id/tvLogo"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvLogo"
-        app:srcCompat="@drawable/logo" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="80dp">
 
-    <TextView
-        android:id="@+id/tvLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:fontFamily="@font/unicaone"
-        android:letterSpacing="0.1"
-        android:text="BUKU PR"
-        android:textColor="@color/white"
-        android:textSize="58sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ivLogo"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/CreateYourAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/varela"
-        android:text="Create your account"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/sign_in_layout"
-        android:orientation="vertical"
-        android:padding="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivLogo">
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLogo"
+            app:layout_constraintEnd_toStartOf="@+id/tvLogo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvLogo"
+            app:srcCompat="@drawable/logo" />
 
         <TextView
-            android:id="@+id/tvEmail"
-            android:layout_width="match_parent"
+            android:id="@+id/tvLogo"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/varela"
-            android:text="Email"
-            android:textColor="@color/grey_textview"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/varela"
-            android:hint="youremail@example.com"
-            android:textSize="16sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <TextView
-            android:id="@+id/tvPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/varela"
-            android:text="Password"
-            android:textColor="@color/grey_textview"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/varela"
-            android:hint="Must be at least 6 characters"
-            android:textSize="16sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <TextView
-            android:id="@+id/tvConfirm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/varela"
-            android:text="Confirm Password"
-            android:textColor="@color/grey_textview"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/etConfirm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/varela"
-            android:hint="Confirm Password"
-            android:textSize="16sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnSignup"
-            android:layout_width="220dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/style_rounded_blue_rectangle"
-            android:fontFamily="@font/varela"
-            android:text="Sign Up"
+            android:layout_marginTop="64dp"
+            android:fontFamily="@font/unicaone"
+            android:letterSpacing="0.1"
+            android:text="BUKU PR"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="58sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivLogo"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/CreateYourAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/varela"
+            android:text="Create your account"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout" />
 
-    <TextView
-        android:id="@+id/tvToLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:fontFamily="@font/varela"
-        android:text="Sign in"
-        android:textColor="@color/blue"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvAlreadyHaveAnAccount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvAlreadyHaveAnAccount"
-        app:layout_constraintTop_toTopOf="@+id/tvAlreadyHaveAnAccount" />
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/sign_in_layout"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo">
 
-    <TextView
-        android:id="@+id/tvAlreadyHaveAnAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/varela"
-        android:text="Already have an account?"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvToLogin"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/varela"
+                android:text="Email"
+                android:textColor="@color/grey_textview"
+                android:textSize="18sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/etEmailSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/varela"
+                android:hint="youremail@example.com"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/varela"
+                android:text="Password"
+                android:textColor="@color/grey_textview"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etPasswordSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/varela"
+                android:hint="Must be at least 6 characters"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/varela"
+                android:text="Confirm Password"
+                android:textColor="@color/grey_textview"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etConfirmSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/varela"
+                android:hint="Confirm Password"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignup"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/style_rounded_blue_rectangle"
+                android:fontFamily="@font/varela"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/varela"
+            android:text="Sign in"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAlreadyHaveAnAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvAlreadyHaveAnAccount"
+            app:layout_constraintTop_toTopOf="@+id/tvAlreadyHaveAnAccount" />
+
+        <TextView
+            android:id="@+id/tvAlreadyHaveAnAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/varela"
+            android:text="Already have an account?"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvToLogin"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
