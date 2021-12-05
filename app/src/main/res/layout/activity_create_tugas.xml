@@ -1,9 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/base_background"
     tools:context=".CreateTugasActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_topbar"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnBackCT"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/ic_left"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvNamaBukuPrCT"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/varela"
+                    android:maxLines="1"
+                    android:paddingTop="3dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_textview"
+                    android:textSize="26sp"
+                    app:layout_constraintBottom_toBottomOf="@id/btnBackCT"
+                    app:layout_constraintStart_toEndOf="@id/btnBackCT"
+                    app:layout_constraintTop_toTopOf="@id/btnBackCT" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDoneCT"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_done"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDoneCT"
+                    app:layout_constraintRight_toLeftOf="@id/tvDoneCT"
+                    app:layout_constraintTop_toTopOf="@id/tvDoneCT" />
+
+                <TextView
+                    android:id="@+id/tvDoneCT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/varela"
+                    android:paddingTop="2dp"
+                    android:text="Done"
+                    android:textColor="@color/grey_textview_2"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvNamaBukuPrCT"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvNamaBukuPrCT" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_main"
+                android:layout_width="match_parent"
+                android:layout_height="692dp"
+                android:layout_weight="9"
+                android:background="@drawable/style_create_bukupr"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvCreateTugas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/varela"
+                    android:gravity="center"
+                    android:text="CREATE ASSIGNMENT"
+                    android:textColor="@color/white"
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="@id/cl_main"
+                    app:layout_constraintStart_toStartOf="@id/cl_main"
+                    app:layout_constraintTop_toTopOf="@id/cl_main" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Name"
+                    android:textColor="@color/grey_textview_2"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@id/cl_main"
+                    app:layout_constraintTop_toBottomOf="@id/tvCreateTugas" />
+
+                <EditText
+                    android:id="@+id/etNamaTugas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey_textview"
+                    android:hint="Insert assignment name"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/grey_textview"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Description"
+                    android:textColor="@color/grey_textview_2"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@id/tvName"
+                    app:layout_constraintTop_toBottomOf="@id/etNamaTugas" />
+
+                <EditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey_textview"
+                    android:gravity="top"
+                    android:hint="Insert description"
+                    android:maxHeight="200dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/grey_textview"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="@id/tvDescription"
+                    app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Status"
+                    android:textColor="@color/grey_textview_2"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@id/tvDescription"
+                    app:layout_constraintTop_toBottomOf="@id/etDescription" />
+
+                <Spinner
+                    android:id="@+id/status_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:backgroundTint="@color/grey_textview"
+                    app:layout_constraintTop_toBottomOf="@id/tvStatus"
+                    app:layout_constraintStart_toStartOf="@id/tvStatus"/>
+
+                <TextView
+                    android:id="@+id/tvSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Subject"
+                    android:textColor="@color/grey_textview_2"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@id/tvStatus"
+                    app:layout_constraintTop_toBottomOf="@id/status_spinner" />
+
+                <EditText
+                    android:id="@+id/etSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey_textview"
+                    android:hint="Insert subject"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/grey_textview"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="@id/tvSubject"
+                    app:layout_constraintTop_toBottomOf="@id/tvSubject" />
+
+                <TextView
+                    android:id="@+id/tvStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Start Date"
+                    android:textColor="@color/grey_textview_2"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@id/etStartDate"
+                    app:layout_constraintStart_toStartOf="@id/etStartDate"
+                    app:layout_constraintTop_toBottomOf="@id/etSubject" />
+
+                <EditText
+                android:id="@+id/etStartDate"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey_textview"
+                android:hint="DD/MM/YYYY"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey_textview"
+                android:textSize="20sp"
+                android:gravity="center"
+                app:layout_constraintLeft_toLeftOf="@id/tvSubject"
+                app:layout_constraintTop_toBottomOf="@id/tvStartDate" />
+
+                <TextView
+                    android:id="@+id/tvDueDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Due Date"
+                    android:textColor="@color/grey_textview_2"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@id/etDueDate"
+                    app:layout_constraintStart_toStartOf="@id/etDueDate"
+                    app:layout_constraintTop_toBottomOf="@id/etSubject" />
+
+                <EditText
+                    android:id="@+id/etDueDate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey_textview"
+                    android:hint="DD/MM/YYYY"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/grey_textview"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="@id/etSubject"
+                    app:layout_constraintTop_toBottomOf="@id/tvDueDate" />
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

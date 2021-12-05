@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudio_SDK/BukuPR3/app/src/main/res/drawable/sign_in_layout.xml" value="0.2638888888888889" />
+        <entry key="..\:/AndroidStudio_SDK/BukuPR3/app/src/main/res/drawable/style_bottom_line.xml" value="0.18518518518518517" />
         <entry key="..\:/AndroidStudio_SDK/BukuPR3/app/src/main/res/drawable/style_create_bukupr.xml" value="0.4892578125" />
         <entry key="..\:/AndroidStudio_SDK/BukuPR3/app/src/main/res/drawable/style_rounded_blue_rectangle.xml" value="0.2638888888888889" />
         <entry key="..\:/AndroidStudio_SDK/BukuPR3/app/src/main/res/layout/activity_buku_pr.xml" value="0.259375" />
         <entry key="..\:/AndroidStudio_SDK/BukuPR3/app/src/main/res/layout/activity_create_buku_pr.xml" value="0.264" />
+        <entry key="..\:/AndroidStudio_SDK/BukuPR3/app/src/main/res/layout/activity_create_tugas.xml" value="0.264" />
         <entry key="..\:/AndroidStudio_SDK/BukuPR3/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/AndroidStudio_SDK/BukuPR3/app/src/main/res/layout/activity_signup.xml" value="0.2" />
       </map>
