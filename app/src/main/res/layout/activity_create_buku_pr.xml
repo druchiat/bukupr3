@@ -17,54 +17,45 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_topbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="0.5">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnBackCBP"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/ic_left"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tvNamaBukuPrCT"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbBackCBP"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="BUKU PR"
-                android:textSize="26sp"
-                android:textColor="@color/grey_textview"
+                android:layout_height="wrap_content"
+                android:background=""
                 android:fontFamily="@font/varela"
-                android:paddingTop="3dp"
-                app:layout_constraintStart_toEndOf="@id/btnBackCBP"
-                app:layout_constraintTop_toTopOf="@id/btnBackCBP"
-                app:layout_constraintBottom_toBottomOf="@id/btnBackCBP"/>
+                android:paddingLeft="0dp"
+                android:text="BUKU PR"
+                android:textColor="@color/grey_textview"
+                android:textSize="26sp"
+                app:icon="@drawable/ic_left"
+                app:iconTint="@color/grey_textview"
+                app:iconGravity="start"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/cl_topbar"
+                app:layout_constraintTop_toTopOf="@id/cl_topbar" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnDoneCBP"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/ic_done"
-                app:layout_constraintTop_toTopOf="@id/tvDoneCBP"
-                app:layout_constraintBottom_toBottomOf="@id/tvDoneCBP"
-                app:layout_constraintRight_toLeftOf="@id/tvDoneCBP"/>
-
-            <TextView
-                android:id="@+id/tvDoneCBP"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbDoneCBP"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:background=""
+                android:fontFamily="@font/varela"
+                android:paddingLeft="0dp"
                 android:text="Done"
                 android:textColor="@color/grey_textview_2"
-                android:textSize="20sp"
-                android:fontFamily="@font/varela"
-                android:paddingTop="2dp"
-                android:layout_marginRight="20dp"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tvNamaBukuPrCT"
-                app:layout_constraintBottom_toBottomOf="@id/tvNamaBukuPrCT"/>
+                android:textSize="16sp"
+                app:icon="@drawable/ic_done"
+                app:iconTint="@color/grey_textview_2"
+                app:iconGravity="textStart"
+                app:iconSize="25dp"
+                app:layout_constraintBottom_toBottomOf="@id/mbBackCBP"
+                app:layout_constraintEnd_toEndOf="@id/cl_topbar"
+                app:layout_constraintTop_toTopOf="@id/mbBackCBP" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -72,12 +63,12 @@
             android:id="@+id/cl_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="9"
+            android:layout_weight="9.5"
             android:background="@drawable/style_create_bukupr"
             android:padding="20dp">
 
             <TextView
-                android:id="@+id/tvCreateTugas"
+                android:id="@+id/tvCreateBukuPr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CREATE BUKU PR"
@@ -100,7 +91,7 @@
                 android:textColor="@color/grey_textview_2"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@id/cl_main"
-                app:layout_constraintTop_toBottomOf="@id/tvCreateTugas"
+                app:layout_constraintTop_toBottomOf="@id/tvCreateBukuPr"
                 />
 
             <EditText
