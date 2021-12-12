@@ -16,7 +16,7 @@ class CreateBukuPrActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_buku_pr)
 
-        
+
         val etNamaBukuPr : EditText = findViewById(R.id.etNamaBukuPr)
 
         db = FirebaseFirestore.getInstance()
