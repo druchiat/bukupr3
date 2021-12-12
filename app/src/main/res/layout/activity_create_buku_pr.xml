@@ -98,14 +98,13 @@
                 android:id="@+id/etNamaBukuPr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey_textview"
                 android:hint="Insert buku pr name"
-                android:textSize="20sp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/grey_textview"
-                android:backgroundTint="@color/grey_textview"
-                android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/tvName"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

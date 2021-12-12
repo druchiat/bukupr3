@@ -16,6 +16,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.auth.User
 import com.google.firebase.ktx.Firebase
 import org.w3c.dom.Text
+import java.util.*
 
 class CreateBukuPrActivity : AppCompatActivity() {
 
@@ -47,7 +48,8 @@ class CreateBukuPrActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             val currentUser = Firebase.auth.currentUser?.uid.toString()
-            val bukupr = BukuPr(currentUser, nama)
+            val idBukuPr = UUID.randomUUID().toString()
+            val bukupr = BukuPr(idBukuPr, currentUser, nama)
 
             addBukuPr(bukupr)
         }
@@ -55,7 +57,7 @@ class CreateBukuPrActivity : AppCompatActivity() {
     }
 
     private fun addBukuPr(bukupr : BukuPr){
-        db.collection("BukuPr").add(bukupr)
+        db.collection("BukuPr").document(bukupr.idBukuPr).set(bukupr)
             .addOnSuccessListener {
                 Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
                 startActivity(Intent(this, BukuPrActivity::class.java))
