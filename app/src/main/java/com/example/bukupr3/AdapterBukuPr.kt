@@ -27,7 +27,8 @@ class AdapterBukuPr () : RecyclerView.Adapter <AdapterBukuPr.ViewHolder>(){
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, TugasActivity::class.java)
-
+            intent.putExtra("bukupr", bukuPr[position])
+            holder.itemView.context.startActivity(intent)
         }
     }
 

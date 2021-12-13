@@ -52,7 +52,7 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnSuccessListener {
                 Toast.makeText(this, "Login success", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this, CreateBukuPrActivity::class.java))
+                startActivity(Intent(this, BukuPrActivity::class.java))
                 finish()
             }
             .addOnFailureListener { e ->
@@ -64,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if (auth.currentUser != null) {
-            startActivity(Intent(this, CreateBukuPrActivity::class.java))
+            startActivity(Intent(this, BukuPrActivity::class.java))
             finish()
         }
     }

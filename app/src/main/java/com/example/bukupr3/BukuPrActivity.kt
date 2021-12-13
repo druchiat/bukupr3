@@ -27,11 +27,17 @@ class BukuPrActivity : AppCompatActivity() {
         setContentView(R.layout.activity_buku_pr)
 
         val btnLogout : Button = findViewById(R.id.btnLogout)
+        val btnCreate : Button = findViewById(R.id.btnCreateBukuPr)
         rvBukuPr = findViewById(R.id.rvBukuPr)
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
         getData(Firebase.auth.currentUser?.uid.toString())
+
+        btnCreate.setOnClickListener {
+            startActivity(Intent(this, CreateBukuPrActivity::class.java))
+            finish()
+        }
 
         btnLogout.setOnClickListener {
             auth.signOut()

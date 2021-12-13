@@ -22,44 +22,37 @@
                 android:layout_height="90dp"
                 android:layout_weight="0.5">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/mbBackCT"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnBackCT"
                     android:layout_width="280dp"
                     android:layout_height="wrap_content"
-                    android:background="@color/base_background"
+                    android:backgroundTint="@color/base_background"
                     android:fontFamily="@font/varela"
-                    android:paddingLeft="0dp"
                     android:textColor="@color/grey_textview"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:maxLines="1"
                     android:singleLine="true"
                     android:ellipsize="end"
-                    app:icon="@drawable/ic_left"
-                    app:iconTint="@color/grey_textview"
-                    app:iconGravity="start"
-                    app:iconSize="40dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/cl_topbar"
-                    app:layout_constraintTop_toTopOf="@id/cl_topbar" />
+                    android:drawableStart="@drawable/ic_left"
+                    app:layout_constraintTop_toTopOf="@+id/cl_topbar"
+                    app:layout_constraintBottom_toBottomOf="@id/cl_topbar"
+                    app:layout_constraintStart_toStartOf="@id/cl_topbar"/>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/mbDoneCT"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDoneCT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="15dp"
-                    android:background="@color/base_background"
+                    android:backgroundTint="@color/base_background"
                     android:fontFamily="@font/varela"
-                    android:paddingLeft="0dp"
                     android:text="Done"
                     android:textColor="@color/grey_textview_2"
                     android:textSize="16sp"
-                    app:icon="@drawable/ic_done"
-                    app:iconTint="@color/grey_textview_2"
-                    app:iconGravity="textStart"
-                    app:iconSize="25dp"
-                    app:layout_constraintBottom_toBottomOf="@id/mbBackCT"
-                    app:layout_constraintEnd_toEndOf="@id/cl_topbar"
-                    app:layout_constraintTop_toTopOf="@id/mbBackCT" />
+                    android:drawableStart="@drawable/ic_done"
+                    android:layout_marginRight="20dp"
+                    app:layout_constraintTop_toTopOf="@+id/btnBackCT"
+                    app:layout_constraintBottom_toBottomOf="@id/btnBackCT"
+                    app:layout_constraintEnd_toEndOf="@id/cl_topbar"/>
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

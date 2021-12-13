@@ -4,9 +4,8 @@ import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
+import android.widget.*
+import com.google.android.material.button.MaterialButton
 
 class CreateTugasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,6 +13,17 @@ class CreateTugasActivity : AppCompatActivity() {
         setContentView(R.layout.activity_create_tugas)
 
         val spinner: Spinner = findViewById(R.id.status_spinner)
+        val btnBackCT : Button = findViewById(R.id.btnBackCT)
+        val btnDoneCT : Button = findViewById(R.id.btnDoneCT)
+        val etNamaTugas : EditText = findViewById(R.id.etNamaTugas)
+        val etDescription : EditText = findViewById(R.id.etDescription)
+        val status_spinner : Spinner = findViewById(R.id.status_spinner)
+        val etSubject : EditText = findViewById(R.id.etSubject)
+        val etStartDate : EditText = findViewById(R.id.etStartDate)
+        val etDueDate : EditText = findViewById(R.id.etDueDate)
+
+
+
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter.createFromResource(
