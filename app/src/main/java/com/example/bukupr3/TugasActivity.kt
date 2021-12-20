@@ -31,7 +31,12 @@ class TugasActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
-        getDataTugas(dataBukuPr?.idBukuPr)
+        //getDataTugas(dataBukuPr?.idBukuPr)
+
+        btnBackToBukuPr.setOnClickListener {
+            startActivity(Intent(this, BukuPrActivity::class.java))
+            finish()
+        }
 
         btnCreateTugas.setOnClickListener {
             val intent = Intent(this, CreateTugasActivity::class.java)
