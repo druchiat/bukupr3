@@ -32,7 +32,7 @@ class BukuPrActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
-        getData(Firebase.auth.currentUser?.uid.toString())
+        getDataBukuPr(Firebase.auth.currentUser?.uid.toString())
 
         btnCreate.setOnClickListener {
             startActivity(Intent(this, CreateBukuPrActivity::class.java))
@@ -48,7 +48,7 @@ class BukuPrActivity : AppCompatActivity() {
 
     }
 
-    private fun getData(uid : String){
+    private fun getDataBukuPr(uid : String){
         db.collection("BukuPr")
             .whereEqualTo("uid", uid)
             .get()

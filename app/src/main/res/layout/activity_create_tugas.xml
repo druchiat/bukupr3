@@ -186,6 +186,7 @@
 
                 <EditText
                 android:id="@+id/etStartDate"
+                android:inputType="date"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/grey_textview"
@@ -212,6 +213,7 @@
 
                 <EditText
                     android:id="@+id/etDueDate"
+                    android:inputType="date"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/grey_textview"

@@ -5,8 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.*
+import com.example.bukupr3.model.BukuPr
+import com.example.bukupr3.model.Tugas
+import com.google.firebase.firestore.FirebaseFirestore
+import java.util.*
 
 class CreateTugasActivity : AppCompatActivity() {
+
+    private lateinit var db : FirebaseFirestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_tugas)
@@ -21,6 +28,10 @@ class CreateTugasActivity : AppCompatActivity() {
         val etStartDate : EditText = findViewById(R.id.etStartDate)
         val etDueDate : EditText = findViewById(R.id.etDueDate)
 
+        db = FirebaseFirestore.getInstance()
+
+        val idBukuPr = intent.getStringExtra("idBukuPr").toString()
+
         btnBackCT.setOnClickListener {
             startActivity(Intent(this,TugasActivity::class.java))
             finish()
@@ -29,7 +40,6 @@ class CreateTugasActivity : AppCompatActivity() {
         btnDoneCT.setOnClickListener {
             val nama = etNamaTugas.text.toString()
             val desc = etDescription.text.toString()
-            //val status =
             val subject = etSubject.text.toString()
             val startDate = etStartDate.text.toString()
             val dueDate = etDueDate.text.toString()
@@ -49,6 +59,10 @@ class CreateTugasActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(dueDate)) {
                 etDueDate.error = "Enter Due Date here"
             }
+            val idTugas = UUID.randomUUID().toString()
+            val tugas = Tugas(idTugas,idBukuPr,nama,desc,subject,startDate,dueDate)
+
+            addTugas(tugas)
 
         }
 
@@ -64,6 +78,18 @@ class CreateTugasActivity : AppCompatActivity() {
             // Apply the adapter to the spinner
             spinner.adapter = adapter
         }
+
+    }
+
+    private fun addTugas(tugas: Tugas) {
+        db.collection("Tugas").document(tugas.idTugas).set(tugas)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, TugasActivity::class.java))
+                finish()
+            } .addOnFailureListener {
+                Toast.makeText(this, "Failed. Please try again.", Toast.LENGTH_LONG).show()
+            }
 
     }
 }
